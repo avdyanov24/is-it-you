@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#FAF6F0" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Join the room's scam warning network, live from the stage." />
+    <title>Is it you? · Join the network</title>
+    <script type="module" crossorigin src="../assets/join-0-AlGMFz.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-P2Xu9kJm.js">
+    <link rel="modulepreload" crossorigin href="../assets/supabase-BfnRqkkT.js">
+    <link rel="modulepreload" crossorigin href="../assets/lang-DvSpXWQo.js">
+    <link rel="stylesheet" crossorigin href="../assets/join-DONdx9oV.css">
+  </head>
+  <body data-state="intro">
+    <main class="app" id="app">
+      <header class="top">
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="3" r="2.6" /></svg></span>
+        <span class="wordmark">Is it you?</span>
+        <span class="live" id="live" role="status" aria-live="polite" hidden><i></i><span id="live-text"></span></span>
+      </header>
+
+      <section class="copy">
+        <p class="kicker" id="kicker"></p>
+        <h1 id="title"></h1>
+        <p class="lede" id="lede"></p>
+      </section>
+
+      <figure class="chain" aria-hidden="true">
+        <svg id="chain" viewBox="0 0 335 200"></svg>
+      </figure>
+
+      <footer class="action">
+        <button class="join" id="join" type="button">
+          <span class="spinner" aria-hidden="true"></span>
+          <span class="join-label" id="join-label"></span>
+        </button>
+        <p class="note" id="note" aria-live="polite"></p>
+        <button class="retry" id="retry" type="button" hidden></button>
+        <p class="next"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 1.5h6L18.5 7v6L13 18.5H7L1.5 13V7z" /><path class="bang" d="M10 5.6v5.4" /><circle cx="10" cy="14.2" r="1.3" /></svg><span data-t="next"></span></p>
+      </footer>
+    </main>
+
+    <section class="alarm" id="alarm" role="alertdialog" aria-modal="true" aria-labelledby="alarm-title" aria-describedby="alarm-message" hidden>
+      <div class="alarm-fill"></div>
+      <div class="alarm-waves" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="alarm-body">
+        <svg class="octagon" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M22.3 4h19.4L60 22.3v19.4L41.7 60H22.3L4 41.7V22.3z" />
+          <path class="bang" d="M32 17v20" /><circle class="dot" cx="32" cy="46" r="3.4" />
+        </svg>
+        <p class="alarm-kicker" data-t="alarmKicker"></p>
+        <h2 id="alarm-title"></h2>
+        <p class="alarm-message" id="alarm-message"></p>
+        <p class="alarm-meta" id="alarm-meta"></p>
+        <p class="vaccine"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8" /><path d="M6 10.4l2.6 2.6L14.2 7.4" /></svg><span data-t="vaccinated"></span></p>
+        <button class="dismiss" id="dismiss" type="button" data-t="gotIt"></button>
+      </div>
+    </section>
+
+  </body>
+</html>

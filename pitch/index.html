@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Is it you? · Pitch</title>
+    <script type="module" crossorigin src="../assets/pitch-BrvboiRU.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-P2Xu9kJm.js">
+    <link rel="modulepreload" crossorigin href="../assets/bulgaria-Cx3xBvVW.js">
+    <link rel="modulepreload" crossorigin href="../assets/supabase-BfnRqkkT.js">
+    <link rel="stylesheet" crossorigin href="../assets/pitch-Cf33ei60.css">
+  </head>
+  <body>
+    <main class="deck" id="deck" aria-live="polite">
+      <div class="paper" aria-hidden="true"></div>
+      <canvas class="room" id="room" aria-hidden="true"></canvas>
+
+      <!-- 1 · Waiting: while the room sits down. No product name, so the reveal stays clean. -->
+      <section class="slide s-wait" data-slide="wait" aria-label="Scan the code">
+        <div class="wait-copy">
+          <h1 class="hero"><span class="in" style="--i:0">Scan now.</span><span class="in" style="--i:1">Keep it open.</span></h1>
+          <p class="wait-sub in" style="--i:2">Something happens later.</p>
+        </div>
+        <figure class="qr qr-wait in" style="--i:3"><img class="qr-img" alt="QR code: join the network" width="400" height="400" /></figure>
+      </section>
+
+      <!-- 2 · The name. -->
+      <section class="slide s-name" data-slide="name" aria-label="Is it you?">
+        <div class="field field-pine" aria-hidden="true"></div>
+        <svg class="orbits" viewBox="-600 -600 1200 1200" aria-hidden="true">
+          <circle r="330" /><circle r="450" /><circle r="580" />
+        </svg>
+        <div class="shock" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="name-wrap">
+          <h1 class="name"><span class="w">Is</span> <span class="w">it</span> <span class="w">you?</span></h1>
+          <p class="name-sub">Two-factor authentication for people. We ask the real person’s phone, because a voice can be cloned and a phone can’t.</p>
+        </div>
+      </section>
+
+      <!-- 3 · Team. -->
+      <section class="slide s-team" data-slide="team" aria-label="The team">
+        <p class="eyebrow in" style="--i:0">The team</p>
+        <h2 class="title in" style="--i:1">Three of us, one weekend.</h2>
+        <svg class="team-arc" viewBox="0 0 1920 1080" aria-hidden="true"><path d="M240 760 Q960 470 1680 760" /></svg>
+        <ul class="team">
+          <li class="person in" style="--i:2"><img src="../assets/alexander-DvhNKG5y.jpg" alt="" width="240" height="240" /><b>Alexander Dyanov</b><span>10 G</span></li>
+          <li class="person in" style="--i:3"><img src="../assets/velin-CXYM1Mvd.jpg" alt="" width="240" height="240" /><b>Velin Markov</b><span>10 G</span></li>
+          <li class="person in" style="--i:4"><img src="../assets/iveta-Cq-UNaeg.jpg" alt="" width="240" height="240" /><b>Iveta Noneva</b><span>10 B</span></li>
+        </ul>
+      </section>
+
+      <!-- 4 · The problem. Beat 1 is a hands-up question; beat 2 answers it. -->
+      <section class="slide s-problem" data-slide="problem" aria-label="The problem">
+        <p class="eyebrow in" style="--i:0"><span class="bx" data-only="1">Hands up</span><span class="bx" data-from="2">The problem</span></p>
+        <h2 class="title big swap in" style="--i:1">
+          <span class="bx" data-only="1">Would you know your mum’s voice on the phone?</span>
+          <span class="bx" data-from="2">“I know her voice” isn’t proof anymore.</span>
+        </h2>
+        <div class="voices in" style="--i:2">
+          <div class="voice"><span class="who">Mum</span><div class="wave" aria-hidden="true"></div></div>
+          <div class="voice clone bx" data-from="2"><span class="who">Clone</span><div class="wave" aria-hidden="true"></div></div>
+        </div>
+        <dl class="facts">
+          <div class="fact bx" data-from="2" style="--d:0"><dt>3 s</dt><dd>of audio was enough to clone a voice with an 85% match. <cite>McAfee, 2023</cite></dd></div>
+          <!-- Barrington, Cooper and Farid, "People are poorly equipped to detect AI-powered voice clones", Scientific Reports 15, 11004 (2025).
+               Abstract: participants perceived the identity of an AI-generated voice to be the same as its real counterpart approximately 80% of the time.
+               https://doi.org/10.1038/s41598-025-94170-3 -->
+          <div class="fact bx" data-from="2" style="--d:1"><dt>80%</dt><dd>of the time, listeners matched a clone to the real person’s voice. <cite>Scientific Reports, 2025</cite></dd></div>
+        </dl>
+      </section>
+
+      <!-- 5 · How it works: one face, three states, the way the app shows them. -->
+      <section class="slide s-how" data-slide="how" aria-label="How it works">
+        <p class="eyebrow in" style="--i:0">How it works</p>
+        <h2 class="title in" style="--i:1">We don’t judge the voice.<br />We ask his phone.</h2>
+        <ol class="steps">
+          <li class="in" style="--i:2" data-step="1"><b>Mum taps Verify.</b><span>A call says it’s Velin and asks for money.</span></li>
+          <li class="in" style="--i:3" data-step="2"><b>Velin’s phone answers.</b><span>On a call with Mum? He confirms with Face ID, and his phone signs it.</span></li>
+          <li class="in" style="--i:4" data-step="3"><b>No call, no signature: not him.</b><span>A voice can be cloned. His phone can’t.</span></li>
+        </ol>
+        <div class="face in" style="--i:2" data-state="checking">
+          <svg class="face-ring" viewBox="-200 -200 400 400" aria-hidden="true">
+            <circle class="track" r="176" />
+            <circle class="arc" r="176" pathLength="100" />
+            <circle class="closed" r="176" pathLength="100" />
+            <circle class="broken" r="176" pathLength="100" />
+          </svg>
+          <img src="../assets/velin-CXYM1Mvd.jpg" alt="Velin" width="240" height="240" />
+          <span class="badge badge-ok" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" /></svg></span>
+          <span class="badge badge-no" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17" /></svg></span>
+          <p class="chip"><span data-state-text="checking">Asking Velin’s phone…</span><span data-state-text="verified">It’s Velin.</span><span data-state-text="nothim">Not Velin’s phone.</span></p>
+        </div>
+        <div class="field field-brick" aria-hidden="true"></div>
+        <div class="verdict">
+          <p class="eyebrow">Not Velin</p>
+          <p class="verdict-title">This call is not coming from Velin’s phone.</p>
+          <p class="verdict-sub">Hang up. Call him back on his saved number.</p>
+        </div>
+      </section>
+
+      <!-- 6 · The vaccine network, then the radar. -->
+      <section class="slide s-network" data-slide="network" aria-label="The vaccine network and the scam radar">
+        <div class="net-copy">
+          <p class="eyebrow in" style="--i:0"><span class="bx" data-only="1">The vaccine network</span><span class="bx" data-from="2">The scam radar</span></p>
+          <h2 class="title swap in" style="--i:1">
+            <span class="bx" data-only="1">Scams spread like a virus. <em>We spread the vaccine faster.</em></span>
+            <span class="bx" data-from="2">Every caught scam lands <em>on the map.</em></span>
+          </h2>
+          <p class="lede swap in" style="--i:2">
+            <span class="bx" data-only="1">When Mum catches a scam, the warning runs to her circle, then theirs, in seconds. No names, no numbers, just the story.</span>
+            <span class="bx" data-from="2">The town and the story, never the people. The next family hears about the “fake police” call before it reaches them.</span>
+          </p>
+        </div>
+        <div class="net-art in" style="--i:2">
+          <canvas class="net-canvas bx" data-only="1" id="net" aria-hidden="true"></canvas>
+          <svg class="map bx" data-from="2" id="map" aria-hidden="true"></svg>
+        </div>
+      </section>
+
+      <!-- 7 · The room joins (strategy: team/pitch-participation.md, beats 1 and 2). -->
+      <section class="slide s-join" data-slide="join" aria-label="Join the network">
+        <div class="join-copy">
+          <div class="bx" data-only="1">
+            <p class="eyebrow in" style="--i:0"><span class="if-qr">Your turn</span><span class="if-no-qr">Live in the demo</span></p>
+            <h2 class="title in" style="--i:1"><span class="if-qr">Join the network</span><span class="if-no-qr">Two handshakes from Velin.</span></h2>
+          </div>
+          <div class="bx arm" data-from="2">
+            <h2 class="title">In a minute, a scammer calls Mum.</h2>
+            <p class="lede">With Velin’s cloned voice. If the app catches it, the warning runs through these rings to your phones.</p>
+            <p class="small">Keep the page open. <em>Red</em> means we caught it.</p>
+          </div>
+        </div>
+        <figure class="qr qr-join in" style="--i:2"><img class="qr-img" alt="QR code: join the network" width="560" height="560" /></figure>
+        <div class="bx" data-only="1"><p class="join-note in" style="--i:3">Anonymous. No name, no number, nothing to install.</p></div>
+        <p class="count" id="count" hidden><b id="count-n">0</b> phones in the network</p>
+      </section>
+
+      <!-- 8 · The handoff. -->
+      <section class="slide s-demo" data-slide="demo" aria-label="Let's go to the demo">
+        <h2 class="go"><span class="w">Let’s</span> <span class="w">go</span><br /><span class="w">to</span> <span class="w">the</span> <span class="w">demo.</span></h2>
+      </section>
+
+      <!-- After the exit: the room on the stage's ink, in /stage/'s exact geometry. -->
+      <div class="after" id="after" aria-hidden="true">
+        <header class="brand">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="3" r="2.6" /></svg>
+          <span>Is it you?</span>
+        </header>
+        <p class="waiting">Waiting for a scam call</p>
+      </div>
+    </main>
+  </body>
+</html>

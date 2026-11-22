@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>Is it you? · Live</title>
+    <script type="module" crossorigin src="../assets/stage-7LIn-cq7.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-P2Xu9kJm.js">
+    <link rel="modulepreload" crossorigin href="../assets/supabase-BfnRqkkT.js">
+    <link rel="modulepreload" crossorigin href="../assets/lang-DvSpXWQo.js">
+    <link rel="modulepreload" crossorigin href="../assets/bulgaria-Cx3xBvVW.js">
+    <link rel="stylesheet" crossorigin href="../assets/stage-YoXlazDQ.css">
+  </head>
+  <body>
+    <div class="stage" id="stage">
+      <section class="spread" aria-label="The warning spreading through the room">
+        <canvas id="net" aria-hidden="true"></canvas>
+        <header class="brand">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="3" r="2.6" /></svg>
+          <span>Is it you?</span>
+        </header>
+        <h1 class="headline"><span data-t="headA"></span> <em data-t="headB"></em></h1>
+        <p class="waiting" id="waiting" data-t="waiting"></p>
+        <div class="tally">
+          <div class="focus" id="focus" hidden>
+            <p class="focus-kicker" id="focus-kicker"></p>
+            <p class="focus-title" id="focus-title"></p>
+          </div>
+          <p class="count" aria-live="polite"><span class="num" id="count">0</span> <span class="unit" id="unit"></span></p>
+          <p class="sub" id="sub"></p>
+        </div>
+      </section>
+
+      <aside class="radar" aria-label="Scam radar">
+        <header class="radar-head">
+          <div>
+            <h2 data-t="radarTitle"></h2>
+            <p data-t="radarSub"></p>
+          </div>
+          <span class="live" id="live"><i></i><span id="live-text"></span></span>
+        </header>
+        <svg class="map" id="map" role="img" aria-label="Map of Bulgaria with scam alerts by town"></svg>
+        <p class="stats" id="stats"></p>
+        <ol class="stories" id="stories"></ol>
+      </aside>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Is it you?</title>
+    <!-- The QR may point at the site root: forward phones to the audience page, keeping ?code and ?lang. -->
+    <!-- Guarded so a host that serves this file for unknown paths (SPA fallback) can never loop. -->
+    <script>if (!location.pathname.includes("/join/")) location.replace("./join/" + location.search);</script>
+  </head>
+  <body></body>
+</html>
