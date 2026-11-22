@@ -7,11 +7,10 @@
     <meta name="color-scheme" content="light" />
     <meta name="description" content="Join the room's scam warning network, live from the stage." />
     <title>Is it you? · Join the network</title>
-    <script type="module" crossorigin src="../assets/join-0-AlGMFz.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-P2Xu9kJm.js">
-    <link rel="modulepreload" crossorigin href="../assets/supabase-BfnRqkkT.js">
+    <script type="module" crossorigin src="../assets/join-DvcPg96R.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/defineProperty-DBdBgfZs.js">
     <link rel="modulepreload" crossorigin href="../assets/lang-DvSpXWQo.js">
-    <link rel="stylesheet" crossorigin href="../assets/join-DONdx9oV.css">
+    <link rel="stylesheet" crossorigin href="../assets/join-JPyosGN3.css">
   </head>
   <body data-state="intro">
     <main class="app" id="app">
@@ -30,6 +29,17 @@
       <figure class="chain" aria-hidden="true">
         <svg id="chain" viewBox="0 0 335 200"></svg>
       </figure>
+
+      <section class="vote" id="vote" aria-labelledby="vote-title" hidden>
+        <p class="kicker" data-t="voteKicker"></p>
+        <h2 id="vote-title" data-t="voteTitle"></h2>
+        <div class="vote-clock" role="timer"><span class="vote-track"><i id="vote-bar"></i></span><span id="vote-left"></span></div>
+        <div class="picks">
+          <button class="pick" id="pick-a" type="button" aria-pressed="false"><span class="pick-letter" aria-hidden="true">A</span><span class="pick-tag"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 10.4l3 3L14.8 7" /></svg><span data-t="yourVote"></span></span></button>
+          <button class="pick" id="pick-b" type="button" aria-pressed="false"><span class="pick-letter" aria-hidden="true">B</span><span class="pick-tag"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 10.4l3 3L14.8 7" /></svg><span data-t="yourVote"></span></span></button>
+        </div>
+        <p class="vote-status" id="vote-status" aria-live="polite"></p>
+      </section>
 
       <footer class="action">
         <button class="join" id="join" type="button">

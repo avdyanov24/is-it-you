@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light" />
     <title>Is it you? · Pitch</title>
-    <script type="module" crossorigin src="../assets/pitch-BrvboiRU.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-P2Xu9kJm.js">
-    <link rel="modulepreload" crossorigin href="../assets/bulgaria-Cx3xBvVW.js">
-    <link rel="modulepreload" crossorigin href="../assets/supabase-BfnRqkkT.js">
-    <link rel="stylesheet" crossorigin href="../assets/pitch-Cf33ei60.css">
+    <script type="module" crossorigin src="../assets/pitch-CjcJqKAe.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/defineProperty-DBdBgfZs.js">
+    <link rel="modulepreload" crossorigin href="../assets/bulgaria-CKw5KFGi.js">
+    <link rel="stylesheet" crossorigin href="../assets/pitch-CuIB6Ei6.css">
   </head>
   <body>
     <main class="deck" id="deck" aria-live="polite">
@@ -50,23 +49,80 @@
         </ul>
       </section>
 
-      <!-- 4 · The problem. Beat 1 is a hands-up question; beat 2 answers it. -->
-      <section class="slide s-problem" data-slide="problem" aria-label="The problem">
-        <p class="eyebrow in" style="--i:0"><span class="bx" data-only="1">Hands up</span><span class="bx" data-from="2">The problem</span></p>
-        <h2 class="title big swap in" style="--i:1">
-          <span class="bx" data-only="1">Would you know your mum’s voice on the phone?</span>
-          <span class="bx" data-from="2">“I know her voice” isn’t proof anymore.</span>
-        </h2>
-        <div class="voices in" style="--i:2">
+      <!-- 4 · The problem, as a live test (#38). Clip A, clip B, the room votes on its phones, the presenter
+           reveals with the A or B key, then the punchline. See which-voice.ts. -->
+      <section class="slide s-problem" data-slide="problem" aria-label="Which voice is real?">
+        <canvas class="vv-canvas" aria-hidden="true"></canvas>
+        <div class="vv-head">
+          <p class="eyebrow in" style="--i:0">
+            <span class="bx" data-to="2">Listen</span>
+            <span class="bx" data-only="3"><span class="if-live">Vote on your phone</span><span class="if-hands">Hands up</span></span>
+            <span class="bx" data-from="5">The problem</span>
+          </p>
+          <h2 class="title swap in" style="--i:1">
+            <span class="bx" data-to="2">One is Velin. One is his AI clone.</span>
+            <span class="bx" data-only="3">Which voice is real?</span>
+            <span class="bx big" data-from="5">“I know her voice” isn’t proof anymore.</span>
+          </h2>
+        </div>
+
+        <div class="vv-side" data-side="A">
+          <span class="vv-letter">A</span>
+          <div class="vv-in">
+            <p class="vv-status"><i></i><span></span></p>
+            <p class="vv-pct"><b>0</b>%</p>
+            <p class="vv-n"></p>
+          </div>
+        </div>
+        <div class="vv-side" data-side="B">
+          <span class="vv-letter">B</span>
+          <div class="vv-in">
+            <p class="vv-status"><i></i><span></span></p>
+            <p class="vv-pct"><b>0</b>%</p>
+            <p class="vv-n"></p>
+          </div>
+        </div>
+
+        <div class="vv-clock" role="timer" aria-label="Time left to vote">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><circle class="track" cx="100" cy="100" r="90" /><circle class="sweep" cx="100" cy="100" r="90" pathLength="100" /></svg>
+          <b class="vv-sec">40</b>
+          <span class="vv-unit">seconds</span>
+        </div>
+        <p class="vv-hint" aria-hidden="true">Press <kbd>A</kbd> or <kbd>B</kbd> to reveal the real one</p>
+
+        <!-- The reveal: the real clip floods pine (the product's "it's them"), the clone floods brick. -->
+        <div class="vv-half vv-real" aria-live="polite">
+          <i class="vv-flood"></i>
+          <div class="vv-say">
+            <figure class="vv-face">
+              <svg viewBox="-160 -160 320 320" aria-hidden="true"><circle r="148" pathLength="100" /></svg>
+              <img src="../assets/velin-CXYM1Mvd.jpg" alt="Velin" width="240" height="240" />
+              <span class="vv-ok" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9" /></svg></span>
+            </figure>
+            <p class="eyebrow"><span class="vv-which">Clip A</span> · real</p>
+            <p class="vv-hero">That was Velin.</p>
+          </div>
+        </div>
+        <div class="vv-half vv-clone" aria-live="polite">
+          <i class="vv-flood"></i>
+          <div class="vv-say">
+            <span class="vv-oct" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17" /></svg></span>
+            <p class="eyebrow"><span class="vv-which">Clip B</span> · AI clone</p>
+            <p class="vv-stat"><b class="vv-stat-n">0%</b><span>of you picked the clone.</span></p>
+            <p class="vv-hero vv-nostat">That was the clone.</p>
+          </div>
+        </div>
+
+        <div class="voices bx" data-from="5">
           <div class="voice"><span class="who">Mum</span><div class="wave" aria-hidden="true"></div></div>
-          <div class="voice clone bx" data-from="2"><span class="who">Clone</span><div class="wave" aria-hidden="true"></div></div>
+          <div class="voice clone"><span class="who">Clone</span><div class="wave" aria-hidden="true"></div></div>
         </div>
         <dl class="facts">
-          <div class="fact bx" data-from="2" style="--d:0"><dt>3 s</dt><dd>of audio was enough to clone a voice with an 85% match. <cite>McAfee, 2023</cite></dd></div>
+          <div class="fact bx" data-from="5" style="--d:0"><dt>3 s</dt><dd>of audio was enough to clone a voice with an 85% match. <cite>McAfee, 2023</cite></dd></div>
           <!-- Barrington, Cooper and Farid, "People are poorly equipped to detect AI-powered voice clones", Scientific Reports 15, 11004 (2025).
                Abstract: participants perceived the identity of an AI-generated voice to be the same as its real counterpart approximately 80% of the time.
                https://doi.org/10.1038/s41598-025-94170-3 -->
-          <div class="fact bx" data-from="2" style="--d:1"><dt>80%</dt><dd>of the time, listeners matched a clone to the real person’s voice. <cite>Scientific Reports, 2025</cite></dd></div>
+          <div class="fact bx" data-from="5" style="--d:1"><dt>80%</dt><dd>of the time, listeners matched a clone to the real person’s voice. <cite>Scientific Reports, 2025</cite></dd></div>
         </dl>
       </section>
 
