@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light" />
     <title>Is it you? · Pitch</title>
-    <script type="module" crossorigin src="../assets/pitch-CjcJqKAe.js"></script>
+    <script type="module" crossorigin src="../assets/pitch-Bi2stm36.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/defineProperty-DBdBgfZs.js">
     <link rel="modulepreload" crossorigin href="../assets/bulgaria-CKw5KFGi.js">
-    <link rel="stylesheet" crossorigin href="../assets/pitch-CuIB6Ei6.css">
+    <link rel="stylesheet" crossorigin href="../assets/pitch-BNPT05zi.css">
   </head>
   <body>
     <main class="deck" id="deck" aria-live="polite">
       <div class="paper" aria-hidden="true"></div>
+      <canvas class="ambient" id="ambient" aria-hidden="true"></canvas>
       <canvas class="room" id="room" aria-hidden="true"></canvas>
 
       <!-- 1 · Waiting: while the room sits down. No product name, so the reveal stays clean. -->
@@ -29,6 +30,9 @@
         <div class="field field-pine" aria-hidden="true"></div>
         <svg class="orbits" viewBox="-600 -600 1200 1200" aria-hidden="true">
           <circle r="330" /><circle r="450" /><circle r="580" />
+          <g class="trav t1"><circle class="tv" cx="330" cy="0" r="7" /></g>
+          <g class="trav t2"><circle class="tv" cx="-450" cy="0" r="5.5" /></g>
+          <g class="trav t3"><circle class="tv" cx="0" cy="580" r="4.5" /></g>
         </svg>
         <div class="shock" aria-hidden="true"><i></i><i></i><i></i></div>
         <div class="name-wrap">
@@ -67,7 +71,11 @@
         </div>
 
         <div class="vv-side" data-side="A">
-          <span class="vv-letter">A</span>
+          <span class="vv-letter">A<button class="vv-play" type="button" data-play="A" aria-label="Play clip A">
+            <i class="vv-halo" aria-hidden="true"></i><i class="vv-halo h2" aria-hidden="true"></i>
+            <svg class="vv-prog" viewBox="0 0 120 120" aria-hidden="true"><circle class="t" cx="60" cy="60" r="56" /><circle class="p" cx="60" cy="60" r="56" pathLength="100" /></svg>
+            <svg class="vv-glyph" viewBox="0 0 24 24" aria-hidden="true"><path class="g-play" d="M8.5 6.2v11.6c0 .8.9 1.3 1.6.8l8.6-5.8c.6-.4.6-1.2 0-1.6l-8.6-5.8c-.7-.5-1.6 0-1.6.8z" /><rect class="g-stop" x="7" y="7" width="10" height="10" rx="2.2" /></svg>
+          </button></span>
           <div class="vv-in">
             <p class="vv-status"><i></i><span></span></p>
             <p class="vv-pct"><b>0</b>%</p>
@@ -75,7 +83,11 @@
           </div>
         </div>
         <div class="vv-side" data-side="B">
-          <span class="vv-letter">B</span>
+          <span class="vv-letter">B<button class="vv-play" type="button" data-play="B" aria-label="Play clip B">
+            <i class="vv-halo" aria-hidden="true"></i><i class="vv-halo h2" aria-hidden="true"></i>
+            <svg class="vv-prog" viewBox="0 0 120 120" aria-hidden="true"><circle class="t" cx="60" cy="60" r="56" /><circle class="p" cx="60" cy="60" r="56" pathLength="100" /></svg>
+            <svg class="vv-glyph" viewBox="0 0 24 24" aria-hidden="true"><path class="g-play" d="M8.5 6.2v11.6c0 .8.9 1.3 1.6.8l8.6-5.8c.6-.4.6-1.2 0-1.6l-8.6-5.8c-.7-.5-1.6 0-1.6.8z" /><rect class="g-stop" x="7" y="7" width="10" height="10" rx="2.2" /></svg>
+          </button></span>
           <div class="vv-in">
             <p class="vv-status"><i></i><span></span></p>
             <p class="vv-pct"><b>0</b>%</p>
@@ -174,7 +186,27 @@
         </div>
       </section>
 
-      <!-- 7 · The room joins (strategy: team/pitch-participation.md, beats 1 and 2). -->
+      <!-- 7 · What it's built on: four layers, with a check running down through them. Every line is
+           backed by the repo (ios/, backend/, web/); keep it that way, the judges read the code. -->
+      <section class="slide s-stack" data-slide="stack" aria-label="Tech stack">
+        <p class="eyebrow in" style="--i:0">Tech stack</p>
+        <h2 class="title in" style="--i:1">What it’s built on.</h2>
+        <div class="stack">
+          <span class="rail in" style="--i:2" aria-hidden="true"><i class="pulse"></i></span>
+          <ol class="layers">
+            <li class="layer in" style="--i:2; --n:0"><span class="node" aria-hidden="true"></span><h3>iPhone app</h3>
+              <p><span>SwiftUI</span><span>Secure Enclave key (P-256), unlocked by Face ID</span><span>CallKit: is this phone on a call?</span><span>Live Activity in the Dynamic Island</span><span>Siri, Shortcuts, Action Button</span><span>On-device speech</span></p></li>
+            <li class="layer in" style="--i:3; --n:1"><span class="node" aria-hidden="true"></span><h3>Backend</h3>
+              <p><span>Supabase: Postgres with row-level security, Auth, Realtime</span><span>Edge Functions on Deno</span><span>Signatures checked with WebCrypto</span></p></li>
+            <li class="layer in" style="--i:4; --n:2"><span class="node" aria-hidden="true"></span><h3>AI agent</h3>
+              <p><span>Claude Haiku 5.5 names the scam and writes the warnings</span><span>Two calls in parallel, 4 s timeout</span><span>Templates if it’s slow or offline</span></p></li>
+            <li class="layer in" style="--i:5; --n:3"><span class="node" aria-hidden="true"></span><h3>Web</h3>
+              <p><span>Vite and TypeScript</span><span>This pitch, the audience page, the live radar</span></p></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 8 · The room joins (strategy: team/pitch-participation.md, beats 1 and 2). -->
       <section class="slide s-join" data-slide="join" aria-label="Join the network">
         <div class="join-copy">
           <div class="bx" data-only="1">
@@ -192,7 +224,7 @@
         <p class="count" id="count" hidden><b id="count-n">0</b> phones in the network</p>
       </section>
 
-      <!-- 8 · The handoff. -->
+      <!-- 9 · The handoff. -->
       <section class="slide s-demo" data-slide="demo" aria-label="Let's go to the demo">
         <h2 class="go"><span class="w">Let’s</span> <span class="w">go</span><br /><span class="w">to</span> <span class="w">the</span> <span class="w">demo.</span></h2>
       </section>
